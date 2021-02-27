@@ -1,0 +1,80 @@
+ @font-face { font-family: UberMoveBold; src: url('fonts/UberMoveBold.otf'); } 
+ @font-face { font-family: UberMoveMedium; src: url('fonts/UberMoveMedium.otf'); } 
+ @font-face { font-family: UberMoveTextBold; src: url('fonts/UberMoveTextBold.otf'); } 
+ @font-face { font-family: UberMoveTextLight; src: url('fonts/UberMoveTextLight.otf'); } 
+ @font-face { font-family: UberMoveTextMedium; src: url('fonts/UberMoveTextMedium.otf'); } 
+ @font-face { font-family: UberMoveTextRegular; src: url('fonts/UberMoveTextRegular.otf'); } 
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.background {
+    background: linear-gradient(to bottom, #0d0d0d 0%, #1d1d1d 100%);
+    width: 100%;
+    height: 5000px;
+}
+
+.white-bg {
+    background: #f2f2f2;
+    height: 3000px;
+}
+
+.intro-text {
+    font-family: UberMoveMedium, sans-serif;
+    font-size: 250px;
+    color: #ffffff;
+    /*padding: 15px 0px 0px 35px;*/
+    margin: 0px 0px 0px 240px;
+    padding-top: 75px;
+}
+
+.intro-text-second {
+    font-family: UberMoveMedium, sans-serif;
+    font-size: 250px;
+    color: #ffffff;
+    /*padding: 15px 0px 0px 35px;*/
+    margin: -50px 0px 0px 240px;
+}
+
+.intro-text-third {
+    font-family: UberMoveMedium, sans-serif;
+    font-size: 250px;
+    color: #ffffff;
+    /*padding: 15px 0px 0px 35px;*/
+    margin: -50px 0px 0px 240px;
+    padding-bottom: 180px;
+}
+
+.bubble {
+    position: absolute;
+    padding: 175px 0px 0px 950px;
+}
+
+.insta {
+    position: absolute;
+    padding: 370px 0px 0px 120px;
+}
+
+.facebook {
+    position: absolute;
+    padding: 435px 0px 0px 123px;
+}
+
+.twitter {
+    position: absolute;
+    padding: 500px 0px 0px 120px;
+}
+
+.linkedIn {
+    position: absolute;
+    padding: 565px 0px 0px 120px;
+}
+
+.scroll-text {
+    position: absolute;
+    padding-left: 1800px;
+    padding-top: 750px;
+}
