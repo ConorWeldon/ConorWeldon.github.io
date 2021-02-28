@@ -113,10 +113,6 @@
 
 
 
-.container {
-    display: flex;
-}
-
 .center {
     display: flex;
     justify-content: center;
@@ -131,6 +127,12 @@
 }
 
 .WorldEngine:hover {
+    opacity: 0;
+    transition: all ease-in-out 0.5s;
+    transform: translateY(100px);
+}
+
+.DetectiveShurmen:hover {
     opacity: 0;
     transition: all ease-in-out 0.5s;
     transform: translateY(100px);
@@ -239,4 +241,22 @@ body .js-tilt-glare {
 .WorldEngine {
     margin-left: -15%;
     padding-top: 275%;
+}
+
+.DetectiveShurmen {
+    margin-top: -15%;
+    margin-left: -100px;
+}
+
+
+
+
+
+
+
+.PHP-Explanation {
+    font-family: UberMoveMedium, sans-serif;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 45px;
 }
