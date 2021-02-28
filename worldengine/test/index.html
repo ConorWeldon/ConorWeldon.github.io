@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+
+<?php 
+header("Content-Type: text/html; charset=ISO-8859-1");               //This changes the charachters set/format
+
+require_once 'classes/Connection.php';
+require_once 'classes/Articles.php';
+require_once 'classes/Util.php';
+
+try {
+    $stories = Story::selectAll(5);
+    $sideStories = Story::selectAll(3, 5);
+    $worldStories = Story::selectByCategory("World");
+}
+catch(Exception $e) {
+    die("Exception: " . $e->getMessage());
+}
+?>
+
+<HTML>
+
+<head>
+  <title>First Page</title>
+  <link rel="stylesheet" type="text/css" href="css/grid.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="nine">
+
+      <div class="nine alpha omega mainstory">
+        <h5>Top Story</h5>
+
+        <p class="timestamp"><strong>12:30 GMT</strong> - 2/2/2019</p>
+
+        <h1>Howlin defends his use of Dail privilege as absolutely appropriate</h1>
+
+        <p class="title">Karl O'Brien - Editor</p>
+
+        <article>
+          <p>Labour leader Brendan Howlin has defended his decision to use Dáil privilege to raise allegations against the Garda Commissioner, saying it was "absolutely appropriate".</p>
+
+          <p>Mr Howlin told the Dáil a journalist had alleged to him that Commissioner Nóirín O'Sullivan had made very serious allegations of sexual crimes about garda whistleblower Sergeant Maurice McCabe to journalists in 2013 and 2014.</p>
+
+          <p>Speaking on RTÉ’s Morning Ireland, Mr Howlin said the person who contacted him said they had firsthand knowledge of the matters, and he believed them.</p>
+        </article>
+
+        <p class="link"><a href="#">Read More</a></p>
+
+        <hr>
+      </div>
+
+      <div class="nine alpha omega latest">
+        <h5>Latest</h5>
+        <div class="three">
+          <p class="timestamp"><strong>12:30 GMT</strong> - 2/2/2019</p>
+          <h3>Minister for Health Harris promises waiting time drop by end of year</h3>
+
+          <p class="title">Karl O'Brien - Editor</p>
+
+          <p>Minister for Health Simon Harris has said he is disappointed that the latest NTPF waiting list figures for January show an increase.</p>
+
+          <p>However, he promised that by the end of the year, people will be waiting less time for procedures.</p>
+
+          <p class="link"><a href="#">Read More</a></p>
+
+        </div>
+        <div class="three">
+          <p class="timestamp"><strong>12:30 GMT</strong> - 2/2/2019</p>
+          <h3>Judge doubts further submissions needed in O'Brien case after Kerins judgment</h3>
+
+          <p class="title">Karl O'Brien - Editor</p>
+
+          <p>A High Court judge has said she "doubts" she will need any further submissions from Denis O'Brien's lawyers in the light of the judgment given by the court in the action taken by former Rehab CEO, Angela Kerins.</p>
+
+          <p>Ms Kerins last week lost her legal challenge to the way public hearings were carried out by the Dáil's Public Accounts Committee.</p>
+
+          <p class="link"><a href="#">Read More</a></p>
+
+        </div>
+        <div class="three omega">
+          <p class="timestamp"><strong>12:30 GMT</strong> - 2/2/2019</p>
+          <h3>Blast at plant in France 'not a nuclear accident'</h3>
+          <p class="title">Karl O'Brien - Editor</p>
+          <p>Authorities have said an explosion at a nuclear power station in northern France caused minor injuries but happened outside the plant's nuclear zone and posed no risk of contamination.</p>
+
+          <p>"It is a significant technical event but it is not a nuclear accident," senior local official Olivier Marmion told AFP following the blast at the Flamanville plant.</p>
+
+          <p class="link"><a href="#">Read More</a></p>
+
+        </div>
+      </div>
+
+      <div class="nine alpha omega latest">
+        <h5>Sport</h5>
+        <div class="three alpha">
+          <p class="timestamp"><strong>12:30 GMT</strong> - 2/2/2019</p>
+          <h3>Minister for Health Harris promises waiting time drop by end of year</h3>
+
+          <p class="title">Karl O'Brien - Editor</p>
+
+          <p>Minister for Health Simon Harris has said he is disappointed that the latest NTPF waiting list figures for January show an increase.</p>
+
+          <p>However, he promised that by the end of the year, people will be waiting less time for procedures.</p>
+
+          <p class="link"><a href="#">Read More</a></p>
+
+        </div>
+        <div class="three">
+          <p class="timestamp"><strong>12:30 GMT</strong> - 2/2/2019</p>
+          <h3>Judge doubts further submissions needed in O'Brien case after Kerins judgment</h3>
+
+          <p class="title">Karl O'Brien - Editor</p>
+
+          <p>A High Court judge has said she "doubts" she will need any further submissions from Denis O'Brien's lawyers in the light of the judgment given by the court in the action taken by former Rehab CEO, Angela Kerins.</p>
+
+          <p>Ms Kerins last week lost her legal challenge to the way public hearings were carried out by the Dáil's Public Accounts Committee.</p>
+
+          <p class="link"><a href="#">Read More</a></p>
+
+        </div>
+        <div class="three omega">
+          <p class="timestamp"><strong>12:30 GMT</strong> - 2/2/2019</p>
+          <h3>Blast at plant in France 'not a nuclear accident'</h3>
+          <p class="title">Karl O'Brien - Editor</p>
+          <p>Authorities have said an explosion at a nuclear power station in northern France caused minor injuries but happened outside the plant's nuclear zone and posed no risk of contamination.</p>
+
+          <p>"It is a significant technical event but it is not a nuclear accident," senior local official Olivier Marmion told AFP following the blast at the Flamanville plant.</p>
+
+          <p class="link"><a href="#">Read More</a></p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="three">
+      <h5>Trending</h5>
+      <div class="three alpha omega">
+        <p class="timestamp"><strong>12:30 GMT</strong> - 2/2/2019</p>
+        <h4>RTÉ to show all Ireland's Women's World Cup games</h4>
+
+        <p>RTÉ television will show all of Ireland's Women's Rugby World Cup games as well as the WRWC final across all platforms, TV, radio and online, this August.</p>
+
+        <p class="link"><a href="#">Read More</a></p>
+        <hr>
+      </div>
+
+      <div class="three alpha omega">
+        <p class="timestamp"><strong>12:30 GMT</strong> - 2/2/2019</p>
+        <h4>Samantha Mumba opens up about motherhood</h4>
+
+        <p>Samantha Mumba is well known for her singing and acting but in March 2015 she took on the role of first-time mum to daughter Sage. She told RTÉ LifeStyle that motherhood has become all consuming.</p>
+
+        <p class="link"><a href="#">Read More</a></p>
+        <hr>
+      </div>
+
+      <div class="three alpha omega">
+        <p class="timestamp"><strong>12:30 GMT</strong> - 2/2/2019</p>
+        <h4>OCI Election - Q+A with all three candidates</h4>
+
+        <p>With the election for Olympic Council of Ireland (OCI) President tonight in Dublin, RTÉ.ie posed three key questions to the candidates.</p>
+
+        <p class="link"><a href="#">Read More</a></p>
+        <hr>
+      </div>
+
+      <div class="three alpha omega">
+        <p class="timestamp"><strong>12:30 GMT</strong> - 2/2/2019</p>
+        <h4>Pernod Ricard H1 profits lifted by solid demand in China and US</h4>
+
+        <p>Pernod Ricard posted higher first-half sales and profits today as sales of its Jameson Irish whiskey continued to surge in the US, its top market, and demand for its Martell cognac improved in China. </p>
+        <p class="link"><a href="#">Read More</a></p>
+        <hr>
+      </div>
+
+
+    </div>
+  </div>
+
+</body>
+
+</html>
